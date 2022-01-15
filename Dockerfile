@@ -1,8 +1,7 @@
 FROM node:latest as build-stage
 WORKDIR app
-COPY package*.json /app/
-RUN yarn install
 COPY ./ /app/
+RUN yarn add package.json
 RUN yarn run build
 
 FROM nginx:1.15
