@@ -28,3 +28,22 @@
     text-align: left;
     padding-bottom: 10px;;
 }
+
+.browser-disclaimer-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.browser-disclaimer-container > * {
+    padding: 2px;
+    font-size: 12px;
+}
+
+.browser-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.browser-icon > img {
+    width: 100%;
+}

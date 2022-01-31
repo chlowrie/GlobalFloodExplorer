@@ -1,9 +1,14 @@
 import * as React from 'react';
 import './disclaimer-screen.css'
 import './Opening_11_11.css'
-import pan_logo from '../assets/pan.png'
-import tilt_logo from '../assets/tilt.png'
-import zoom_logo from '../assets/zoom.png'
+import pan_logo from 'assets/pan.png'
+import tilt_logo from 'assets/tilt.png'
+import zoom_logo from 'assets/zoom.png'
+
+import chrome_icon from "assets/ChromeIcon.png"
+import safari_icon from "assets/SafariIcon.png"
+
+const isSafari = window.safari !== undefined;
 
 export default function DisclaimerScreen({ disclaimer, setDisclaimer, isTouch }) {
 
@@ -29,8 +34,31 @@ export default function DisclaimerScreen({ disclaimer, setDisclaimer, isTouch })
                     </input>
                     Accept and continue
                 </label>
+                {/* {isSafari ?  */}
+                    <div className='browser-disclaimer-container-parent'>  
+                        <div className='browser-disclaimer-container'>
+                            <div className='browser-icon'>
+                                <img src={chrome_icon}></img>
+                            </div>
+                            <div className='browser-disclaimer-text'>
+                            We recommend Chrome.
+                            </div>
+                        </div>
+                    </div>
+                    {/* : null } */}
             </div>
+            
         </div>
+        {/* <div className='browser-disclaimer-container-parent'>  
+            <div className='browser-disclaimer-container'>
+                <div className='browser-icon'>
+                    <img src={chrome_icon}></img>
+                </div>
+                <div className='browser-icon'>
+                    <img src={safari_icon}></img>
+                </div>
+            </div>
+        </div> */}
         {!isTouch &&
             <div className='navigation-controls-parent'>
               <div className='navigation-controls'>
