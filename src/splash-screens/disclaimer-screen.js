@@ -6,9 +6,6 @@ import tilt_logo from 'assets/tilt.png'
 import zoom_logo from 'assets/zoom.png'
 
 import chrome_icon from "assets/ChromeIcon.png"
-import safari_icon from "assets/SafariIcon.png"
-
-const isSafari = window.safari !== undefined;
 
 export default function DisclaimerScreen({ disclaimer, setDisclaimer, isTouch }) {
 
@@ -34,7 +31,6 @@ export default function DisclaimerScreen({ disclaimer, setDisclaimer, isTouch })
                     </input>
                     Accept and continue
                 </label>
-                {/* {isSafari ?  */}
                     <div className='browser-disclaimer-container-parent'>  
                         <div className='browser-disclaimer-container'>
                             <div className='browser-icon'>
@@ -45,7 +41,6 @@ export default function DisclaimerScreen({ disclaimer, setDisclaimer, isTouch })
                             </div>
                         </div>
                     </div>
-                    {/* : null } */}
             </div>
             
         </div>
